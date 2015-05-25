@@ -17,5 +17,5 @@ apt_package 'logstash'
 cookbook_file '/etc/logstash/conf.d/redis_to_elasticsearch.conf'
 
 service 'logstash' do
-  action :start
+  action [:enable, :start]
 end
