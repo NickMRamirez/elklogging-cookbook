@@ -4,7 +4,9 @@
 #
 # Copyright (c) 2015 Nick Ramirez, All Rights Reserved.
 
-version = node['elasticsearch']['version']
+apt_package "openjdk-7-jdk"
+
+version = node['logstash']['version']
 
 apt_repository 'logstash' do
   uri "http://packages.elasticsearch.org/logstash/#{version}/debian"
