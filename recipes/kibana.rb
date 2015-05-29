@@ -20,5 +20,6 @@ cookbook_file '/etc/init.d/kibana' do
 end
 
 service 'kibana' do
+  supports [ :status ]
   action [ :enable, :start ]
 end

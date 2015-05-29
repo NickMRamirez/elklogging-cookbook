@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2015 Nick Ramirez, All Rights Reserved.
 
-apt_package "openjdk-7-jdk"
+include_recipe 'java'
 
 version = node['logstash']['version']
 
@@ -19,5 +19,6 @@ apt_package 'logstash'
 cookbook_file '/etc/logstash/conf.d/redis_to_elasticsearch.conf'
 
 service 'logstash' do
+  supports [ :status ]
   action [:enable, :start]
 end

@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2015 Nick Ramirez, All Rights Reserved.
 
-apt_package "openjdk-7-jdk"
+include_recipe 'java'
 
 version = node['elasticsearch']['version']
 
