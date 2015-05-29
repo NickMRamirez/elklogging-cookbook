@@ -6,3 +6,4 @@
 
 include_recipe 'elklogging::logstash'
 include_recipe 'elklogging::elasticsearch'
+include_recipe 'elklogging::kibana'

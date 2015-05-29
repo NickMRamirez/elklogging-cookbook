@@ -17,5 +17,6 @@ end
 apt_package 'elasticsearch'
 
 service 'elasticsearch' do
+  supports [ :status ]
   action [:enable, :start]
 end

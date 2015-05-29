@@ -2,12 +2,12 @@
 
 About
 =====
-A simple library that installs logstash, elasticsearch and redis
+A simple library that installs logstash, elasticsearch and kibana
 as services. It tries to reduce the number of cookbook dependencies,
-which so often become unhinged. Elasticsearch listens on port
-9200 and redis listens on port 6379.
+which so often become unhinged. Services listen on the following ports:
 
-It does not currently install kibana, but will in the future.
+ * elasticsearch - 9200
+ * kibana - 5601
 
 Tested on
 =========
@@ -17,9 +17,10 @@ Recipes
 =======
 Recipes that you can use are:
 
- * default - installs everything with default attributes
- * logstash - installs only logstash as a service
- * elasticsearch - installs only elasticsearch as a service
+ * default - installs everything
+ * logstash - installs logstash as a service
+ * elasticsearch - installs elasticsearch as a service
+ * kibana - installs kibana as a service
  
 Attributes
 ==========
