@@ -12,6 +12,11 @@ which so often become unhinged. Services listen on the following ports:
 Tested on
 =========
  * Ubuntu 14.10
+ 
+System requirements
+===================
+
+ * 1024 mb RAM
 	
 Recipes
 =======
