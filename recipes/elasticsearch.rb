@@ -14,7 +14,14 @@ apt_repository 'elasticsearch' do
   components ['stable', 'main']
 end
 
-apt_package 'elasticsearch'
+apt_package 'elasticsearch' do
+  notifies :run, 'execute[install_marvel]', :immediately
+end
+
+execute 'install_marvel' do
+  command '/usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest'
+  action :nothing
+end
 
 service 'elasticsearch' do
   supports [ :status ]
