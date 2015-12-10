@@ -19,7 +19,8 @@ apt_package 'elasticsearch' do
 end
 
 execute 'install_marvel' do
-  command '/usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest'
+  command '/usr/share/elasticsearch/bin/plugin install license'
+  command '/usr/share/elasticsearch/bin/plugin install marvel-agent'
   action :nothing
 end
 
