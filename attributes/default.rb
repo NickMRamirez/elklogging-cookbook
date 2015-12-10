@@ -1,4 +1,4 @@
-default['logstash']['version'] = '1.5'
+default['logstash']['version'] = '2.1'
 default['elasticsearch']['version'] = '2.1'
 
 # Overrides for java cookbook
