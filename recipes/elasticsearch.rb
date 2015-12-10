@@ -18,6 +18,8 @@ apt_package 'elasticsearch' do
   notifies :run, 'execute[install_license]', :immediately
 end
 
+cookbook_file '/etc/elasticsearch/elasticsearch.yml'
+
 execute 'install_license' do
   command '/usr/share/elasticsearch/bin/plugin install license'
   action :nothing
