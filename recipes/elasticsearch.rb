@@ -15,11 +15,16 @@ apt_repository 'elasticsearch' do
 end
 
 apt_package 'elasticsearch' do
+  notifies :run, 'execute[install_license]', :immediately
+end
+
+execute 'install_license' do
+  command '/usr/share/elasticsearch/bin/plugin install license'
+  action :nothing
   notifies :run, 'execute[install_marvel]', :immediately
 end
 
 execute 'install_marvel' do
-  command '/usr/share/elasticsearch/bin/plugin install license'
   command '/usr/share/elasticsearch/bin/plugin install marvel-agent'
   action :nothing
 end
