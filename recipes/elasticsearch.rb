@@ -9,8 +9,7 @@ include_recipe 'java'
 version = node['elasticsearch']['version']
 
 apt_repository 'elasticsearch' do
-  # uri "http://packages.elasticsearch.org/elasticsearch/#{version}/debian"
-  uri "http://packages.elastic.co/elasticsearch/#{version}/debian"
+  uri "http://packages.elasticsearch.org/elasticsearch/#{version}/debian"
   key 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch'
   components ['stable', 'main']
 end
