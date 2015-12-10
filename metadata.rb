@@ -4,7 +4,7 @@ maintainer_email 'nickram44@gmail.com'
 license          'all_rights'
 description      'Installs and configures logstash as a service, elasticsearch, kibana and redis'
 long_description 'Installs/Configures elklogging'
-version          '0.3.4'
+version          '0.3.5'
 
 depends 'apt'
 depends 'java'
