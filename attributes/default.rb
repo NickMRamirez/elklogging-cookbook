@@ -1,6 +1,6 @@
 default['logstash']['version'] = '2.1'
 default['elasticsearch']['version'] = '2.x'
-default['kibana']['version'] = '4.1'
+default['kibana']['version'] = '4.3.0'
 
 # Overrides for java cookbook
 override['java']['install_flavor'] = 'openjdk'
