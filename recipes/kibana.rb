@@ -21,7 +21,10 @@ cookbook_file '/etc/init.d/kibana' do
   mode "700"		
 end
 
-
+service 'kibana' do
+  supports [ :status ]
+  action [ :enable, :start ]
+end
 
 
 
@@ -32,8 +35,3 @@ end
 # end
 
 # apt_package 'kibana'
-
-# service 'kibana' do
-  # supports [ :status ]
-  # action [ :enable, :start ]
-# end
