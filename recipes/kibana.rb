@@ -5,6 +5,8 @@ kibana_file = File.basename(kibana_package)
 kibana_local_file = "#{Chef::Config[:file_cache_path]}/#{kibana_file}"		
  		 
 directory '/opt/kibana'	
+
+directory '/var/log/kibana'
  		 
 remote_file kibana_local_file do	
   source kibana_package		
