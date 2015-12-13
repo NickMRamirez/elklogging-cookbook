@@ -22,10 +22,11 @@ Recipes
 =======
 Recipes that you can use are:
 
- * default - installs everything
+ * default - installs logstash, elasticsearch and kibana
  * logstash - installs logstash as a service
  * elasticsearch - installs elasticsearch as a service
  * kibana - installs kibana as a service
+ * marvel - installs marvel
  
 Attributes
 ==========

@@ -20,17 +20,6 @@ end
 
 cookbook_file '/etc/elasticsearch/elasticsearch.yml'
 
-execute 'install_license' do
-  command '/usr/share/elasticsearch/bin/plugin install license'
-  action :nothing
-  notifies :run, 'execute[install_marvel]', :immediately
-end
-
-execute 'install_marvel' do
-  command '/usr/share/elasticsearch/bin/plugin install marvel-agent'
-  action :nothing
-end
-
 service 'elasticsearch' do
   supports [ :status ]
   action [:enable, :start]
