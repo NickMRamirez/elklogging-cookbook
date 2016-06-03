@@ -11,6 +11,7 @@ version = node['logstash']['version']
 apt_repository 'logstash' do
   uri "http://packages.elastic.co/logstash/#{version}/debian"
   key 'https://packages.elastic.co/GPG-KEY-elasticsearch'
+  distribution ''
   components ['stable', 'main']
 end
 
