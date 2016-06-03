@@ -14,9 +14,7 @@ apt_repository 'elasticsearch' do
   components ['stable', 'main']
 end
 
-apt_package 'elasticsearch' do
-  notifies :run, 'execute[install_license]', :immediately
-end
+apt_package 'elasticsearch' 
 
 cookbook_file '/etc/elasticsearch/elasticsearch.yml'
 
