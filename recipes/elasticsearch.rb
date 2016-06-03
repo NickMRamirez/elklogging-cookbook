@@ -11,6 +11,7 @@ version = node['elasticsearch']['version']
 apt_repository 'elasticsearch' do
   uri "https://packages.elastic.co/elasticsearch/#{version}/debian"
   key 'http://packages.elasticsearch.org/GPG-KEY-elasticsearch'
+  distribution ''
   components ['stable', 'main']
 end
 
