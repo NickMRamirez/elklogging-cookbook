@@ -1,4 +1,4 @@
-default['logstash']['version'] = '2.1'
+default['logstash']['version'] = '2.3'
 default['elasticsearch']['version'] = '2.x'
 default['kibana']['version'] = '4.3.0'
 
