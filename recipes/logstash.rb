@@ -9,7 +9,7 @@ include_recipe 'java'
 version = node['logstash']['version']
 
 apt_repository 'logstash' do
-  uri "https://packages.elastic.co/logstash/#{version}/debian"
+  uri "http://packages.elastic.co/logstash/#{version}/debian"
   key 'https://packages.elastic.co/GPG-KEY-elasticsearch'
   components ['stable', 'main']
 end
